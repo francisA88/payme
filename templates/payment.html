@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transfer Payment - Transfer Details</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-container">
+            <div class="header">
+                <h1>Complete Your Payment</h1>
+                <p>Transfer the amount below to the provided bank account</p>
+            </div>
+
+            <div class="amount-section">
+                <div class="amount-label">Amount to Pay</div>
+                <div class="amount-value">&#8358;{{amount}}</div>
+            </div>
+
+            <div class="bank-details">
+                <h3>Bank Transfer Details</h3>
+                
+                <div class="detail-row">
+                    <span class="label">Bank Name:</span>
+                    <span class="value" id="bankName">{{account_bank_name}}</span>
+                    <button class="copy-btn" id="copy-bankName" onclick="copyToClipboard('copy-bankName', 'bankName')">Copy</button>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Account Number:</span>
+                    <span class="value" id="accountNumber">{{account_number}}</span>
+                    <button class="copy-btn" id="copy-accountNumber" onclick="copyToClipboard('copy-accountNumber', 'accountNumber')">Copy</button>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Account Name:</span>
+                    <span class="value" id="accountName">FinTechService FLW</span>
+                    <button class="copy-btn" id="copy-accountName" onclick="copyToClipboard('copy-accountName', 'accountName')">Copy</button>
+                </div>
+
+                <div class="detail-row">
+                    <span class="label">Reference:</span>
+                    <span class="value" id="reference">{{reference[:8]}}...</span>
+                    <span style="display: none;" id="full-reference">{{reference}}</span>
+                    <button class="copy-btn" id="copy-full-reference" onclick="copyToClipboard('copy-full-reference', 'full-reference')">Copy</button>
+                </div>
+            </div>
+
+            <div class="expiry-section">
+                <div class="expiry-info">
+                    <span class="expiry-label">⏰ This account expires in:</span>
+                    <span class="expiry-time" id="countdown"></span>
+                    <span id="expiration-time" style="display:none;">{{account_expiration_datetime}}</span>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h4>Transfer Instructions:</h4>
+                <ul>
+                    <li>Use the exact account details provided above</li>
+                    <!-- <li>Include the reference number in your transfer description</li> -->
+                    <li>Complete the transfer within 30 minutes</li>
+                    <li>Click "I've made the transfer" once payment is sent</li>
+                </ul>
+            </div>
+
+            <button class="transfer-btn" onclick="confirmTransfer()">
+                I've made the transfer
+            </button>
+        </div>
+    </div>
+
+    <script src="/static/payment.js"></script>
+</body>
+</html>

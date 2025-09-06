@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Transfer Payment - Customer Details</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="header">
+                <h1>Payment Information</h1>
+                <p>Donate ₦50 for... uh... sapa reduction scheme</p>
+                <p>Please provide your details to proceed with the payment</p>
+            </div>
+
+            <form id="customerForm" class="form" action="/api/create_customer" method="POST">
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" maxlength="15" required>
+                </div>
+
+                <button type="submit" class="proceed-btn">
+                    Proceed to donate ₦100
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="/public/script.js"></script> -->
+</body>
+</html>

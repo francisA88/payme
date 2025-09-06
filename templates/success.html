@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation - Thank You</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="#10B981"/>
+                    <path d="m9 12 2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <div class="success-content">
+                <h1>Transfer Confirmation Received!</h1>
+                <p class="success-message">
+                    Thank you for your payment. We have received your transfer confirmation and are now processing your payment.
+                </p>
+
+                <div class="email-info">
+                    <h3>What happens next?</h3>
+                    <ul>
+                        <li>We will verify your payment within 5-10 minutes</li>
+                        <li>A payment receipt will be sent to <strong id="customerEmail">your email address</strong></li>
+                        <li>You will receive a confirmation email once payment is verified</li>
+                    </ul>
+                </div>
+
+                <div class="reference-info">
+                    <p><strong>Reference Number:</strong> <span id="paymentRef">{{reference}}</span></p>
+                    <p><strong>Amount:</strong> ₦{{amount}}</p>
+                </div>
+
+                <button class="home-btn" onclick="window.location.href=window.location.origin">
+                    Return to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

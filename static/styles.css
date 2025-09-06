@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-container,
+.payment-container,
+.success-container {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 500px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  color: #1e3a8a;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  background: #ffffff;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+.proceed-btn,
+.transfer-btn,
+.home-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 16px;
+}
+
+.proceed-btn:hover,
+.transfer-btn:hover,
+.home-btn:hover {
+  background: #1e40af;
+}
+
+.amount-section {
+  background: #f0f9ff;
+  border: 2px solid #1e3a8a;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.amount-label {
+  color: #1e3a8a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.amount-value {
+  color: #1e3a8a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.bank-details {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.bank-details h3 {
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  font-weight: 600;
+  color: #6b7280;
+  min-width: 120px;
+}
+
+.detail-row .value {
+  flex: 1;
+  margin: 0 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.copy-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+  background: #2563eb;
+}
+
+.expiry-section {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.expiry-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expiry-label {
+  color: #92400e;
+  font-weight: 600;
+}
+
+.expiry-time {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.instructions {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.instructions h4 {
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+.instructions ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instructions li {
+  padding: 4px 0;
+  color: #4b5563;
+  position: relative;
+  padding-left: 20px;
+}
+
+.instructions li:before {
+  content: "•";
+  color: #1e3a8a;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.success-container {
+  text-align: center;
+  max-width: 600px;
+}
+
+.success-icon {
+  margin-bottom: 24px;
+}
+
+.success-content h1 {
+  color: #1e3a8a;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.email-info {
+  background: #f0f9ff;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.email-info h3 {
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.email-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.email-info li {
+  padding: 8px 0;
+  color: #4b5563;
+  position: relative;
+  padding-left: 24px;
+}
+
+.email-info li:before {
+  content: "✓";
+  color: #10b981;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.reference-info {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.reference-info p {
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .form-container,
+  .payment-container,
+  .success-container {
+    padding: 24px;
+    margin: 10px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .detail-row .value {
+    margin: 0;
+  }
+
+  .expiry-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
